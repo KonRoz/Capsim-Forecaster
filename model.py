@@ -1,7 +1,6 @@
 import math
 
 ageOffset = {'Traditional': 2, 'LowEnd': 5, 'HighEnd': 3, 'Performance': 2.5, 'Size': 2.5}
-ageOffset = {'Thrift': 3, 'Core': 2, 'Nano': 1, 'Elite': 0}
 
 #
 # functions
@@ -40,6 +39,7 @@ class Segment:
     self.pfmn = {'value': pfmn, 'weight': positionWeight}
     self.size = {'value': size, 'weight': positionWeight}
     self.age = {'value': age, 'weight': ageWeight}
+    print(ageOffset)
     self.ageOffset = ageOffset[name]
     self.price = {'high': maxPrice, 'low': minPrice, 'weight': priceWeight}
     self.MTBF = {'high': maxMTBF, 'low': minMTBF, 'weight': MTBFWeight}
